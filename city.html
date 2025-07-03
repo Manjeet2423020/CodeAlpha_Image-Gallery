@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select City</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Select a City</h1>
+
+    <div class="filters">
+      <button onclick="showCity('varanasi')">Varanasi</button>
+      <button onclick="showCity('kashmir')">Kashmir</button>
+      <button onclick="showCity('puri')">Puri</button>
+    </div>
+
+    <div class="gallery" id="varanasiGallery" style="display: none">
+      <img src="image/v1.jpg" class="gallery-item" />
+      <img src="image/v2.jpg" class="gallery-item" />
+      <img src="image/v3.jpg" class="gallery-item" />
+      <img src="image/v4.jpg" class="gallery-item" />
+      <img src="image/v5.jpg" class="gallery-item" />
+      <img src="image/v6.jpg" class="gallery-item" />
+      <img src="image/v7.jpg" class="gallery-item" />
+      <img src="image/v8.jpg" class="gallery-item" />
+      <img src="image/v9.jpg" class="gallery-item" />
+    </div>
+    <div class="gallery" id="kashmirGallery" style="display: none">
+      <img src="image/k1.jpg" class="gallery-item" />
+      <img src="image/k2.jpg" class="gallery-item" />
+      <img src="image/k3.jpg" class="gallery-item" />
+      <img src="image/k4.jpg" class="gallery-item" />
+      <img src="image/k5.jpg" class="gallery-item" />
+      <img src="image/k6.jpg" class="gallery-item" />
+      <img src="image/k7.jpg" class="gallery-item" />
+      <img src="image/k8.jpg" class="gallery-item" />
+    </div>
+
+    <script>
+      function showCity(city) {
+        const cities = ["varanasi", "kashmir", "puri"];
+        cities.forEach((c) => {
+          const el = document.getElementById(c + "Gallery");
+          el.style.display = c === city ? "grid" : "none";
+        });
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

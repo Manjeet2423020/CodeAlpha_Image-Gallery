@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+
+    <div class="filters">
+      <button onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('nature')">Nature</button>
+      <button onclick="goToCityPage()">City</button>
+    </div>
+
+    <div class="gallery">
+      <img src="image/n1.jpg" alt="n1" class="gallery-item nature" />
+      <img src="image/n2.jpg" alt="n2" class="gallery-item nature" />
+      <img src="image/n3.jpg" alt="n3" class="gallery-item nature" />
+      <img src="image/n4.jpg" alt="n4" class="gallery-item nature" />
+      <img src="image/n5.jpg" alt="n5" class="gallery-item nature" />
+      <img src="image/v1.jpg" alt="v1" class="gallery-item varanasi" />
+      <img src="image/v2.jpg" alt="v2" class="gallery-item varanasi" />
+      <img src="image/v3.jpg" alt="v3" class="gallery-item varanasi" />
+      <img src="image/v4.jpg" alt="v4" class="gallery-item varanasi" />
+      <img src="image/v5.jpg" alt="v5" class="gallery-item varanasi" />
+      <img src="image/v6.jpg" alt="v6" class="gallery-item varanasi" />
+      <img src="image/v7.jpg" alt="v7" class="gallery-item varanasi" />
+      <img src="image/v8.jpg" alt="v8" class="gallery-item varanasi" />
+      <img src="image/v9.jpg" alt="v9" class="gallery-item varanasi" />
+      <img src="image/k1.jpg" class="gallery-item kashmir" />
+      <img src="image/k2.jpg" class="gallery-item kashmir" />
+      <img src="image/k3.jpg" class="gallery-item kashmir" />
+      <img src="image/k4.jpg" class="gallery-item kashmir" />
+      <img src="image/k5.jpg" class="gallery-item kashmir" />
+      <img src="image/k6.jpg" class="gallery-item kashmir" />
+      <img src="image/k7.jpg" class="gallery-item kashmir" />
+      <img src="image/k8.jpg" class="gallery-item kashmir" />
+    </div>
+
+    <div id="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-img" id="lightboxImage" />
+      <div class="nav">
+        <span onclick="changeImage(-1)">❮</span>
+        <span onclick="changeImage(1)">❯</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      function goToCityPage() {
+        window.location.href = "city.html";
+      }
+    </script>
+  </body>
+</html>
